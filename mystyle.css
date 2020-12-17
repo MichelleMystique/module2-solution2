@@ -1,22 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
-</head>
-<body>
-  <h1>Our Menu</h1>
-  <div class="grid-container">
-  <section class="grid-item grid-item--one">
-    <article class="dish dish--one">Chicken</article>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-  </section>
-  <section class="grid-item grid-item--two">
-    <article class="dish dish--two">Beef</article>
-  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-  </section>
-  <section class="grid-item grid-item--three"><article class="dish dish--three">Sushi</article>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p></section>
-  </div>
-  </body>
-</html>
+.grid-item {
+  box-sizing: border-box;
+  border: solid black 1px;
+  display: inline-block;
+  margin: 2% 1% 1% 1%;
+  background-color: grey;
+  position: relative;
+ 
+}
+.grid-item {
+    width: 40%;
+}
+@media (max-width: 767px){
+  .grid-item {
+    width: 84%;
+}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .grid-item--one, .grid-item--two {
+    width: 40%;
+}
+  .grid-item--three {
+    width: 83%;
+}
+}
+@media (min-width: 992px) {
+  .grid-item {
+    width: 30%;
+}
+}
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+h1 {
+  text-align: center;
+    font-size: 1.75em;
+}
+.grid-container {
+  width: 100%;
+  text-align: center;
+}
+
+.dish {
+  float: right;
+  border: solid black;
+  border-width: 0px 0px 1px 1px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.25em;
+}
+.dish--one {
+  background-color: pink;
+ 
+}
+section {
+  padding: 15px 5px 5px 5px;
+ 
+}
+
+.dish--two {
+  background-color: red;
+}
+.dish--three {
+  background-color: beige;
+   }
